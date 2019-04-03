@@ -17,9 +17,7 @@ export default {
     dndList: 'Dnd List',
     splitPane: 'SplitPane',
     avatarUpload: 'Avatar Upload',
-    dropzone: 'Dropzone',
     sticky: 'Sticky',
-    countTo: 'CountTo',
     componentMixin: 'Mixin',
     backToTop: 'BackToTop',
     dragDialog: 'Drag Dialog',
@@ -57,11 +55,8 @@ export default {
     selectExcel: 'Export Selected',
     mergeHeader: 'Merge Header',
     uploadExcel: 'Upload Excel',
-    zip: 'Zip',
     pdf: 'PDF',
-    exportZip: 'Export Zip',
     theme: 'Theme',
-    clipboardDemo: 'Clipboard',
     i18n: 'I18n',
     externalLink: 'External Link'
   },
@@ -143,10 +138,6 @@ export default {
     export: 'Export',
     selectedExport: 'Export Selected Items',
     placeholder: 'Please enter the file name(default excel-list)'
-  },
-  zip: {
-    export: 'Export',
-    placeholder: 'Please enter the file name(default file)'
   },
   pdf: {
     tips: 'Here we use window.print() to implement the feature of downloading pdf.'

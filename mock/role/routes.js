@@ -155,34 +155,16 @@ export const asyncRoutes = [
         meta: { title: 'jsonEditor' }
       },
       {
-        path: 'splitpane',
-        component: 'views/components-demo/splitpane',
-        name: 'SplitpaneDemo',
-        meta: { title: 'splitPane' }
-      },
-      {
         path: 'avatar-upload',
         component: 'views/components-demo/avatarUpload',
         name: 'AvatarUploadDemo',
         meta: { title: 'avatarUpload' }
       },
       {
-        path: 'dropzone',
-        component: 'views/components-demo/dropzone',
-        name: 'DropzoneDemo',
-        meta: { title: 'dropzone' }
-      },
-      {
         path: 'sticky',
         component: 'views/components-demo/sticky',
         name: 'StickyDemo',
         meta: { title: 'sticky' }
-      },
-      {
-        path: 'count-to',
-        component: 'views/components-demo/countTo',
-        name: 'CountToDemo',
-        meta: { title: 'countTo' }
       },
       {
         path: 'mixin',
@@ -213,42 +195,6 @@ export const asyncRoutes = [
         component: 'views/components-demo/dndList',
         name: 'DndListDemo',
         meta: { title: 'dndList' }
-      },
-      {
-        path: 'drag-kanban',
-        component: 'views/components-demo/dragKanban',
-        name: 'DragKanbanDemo',
-        meta: { title: 'dragKanban' }
-      }
-    ]
-  },
-  {
-    path: '/charts',
-    component: 'layout/Layout',
-    redirect: 'noredirect',
-    name: 'Charts',
-    meta: {
-      title: 'charts',
-      icon: 'chart'
-    },
-    children: [
-      {
-        path: 'keyboard',
-        component: 'views/charts/keyboard',
-        name: 'KeyboardChart',
-        meta: { title: 'keyboardChart', noCache: true }
-      },
-      {
-        path: 'line',
-        component: 'views/charts/line',
-        name: 'LineChart',
-        meta: { title: 'lineChart', noCache: true }
-      },
-      {
-        path: 'mixchart',
-        component: 'views/charts/mixChart',
-        name: 'MixChart',
-        meta: { title: 'mixChart', noCache: true }
       }
     ]
   },
@@ -346,19 +292,6 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/tab',
-    component: 'layout/Layout',
-    children: [
-      {
-        path: 'index',
-        component: 'views/tab/index',
-        name: 'Tab',
-        meta: { title: 'tab', icon: 'tab' }
-      }
-    ]
-  },
-
-  {
     path: '/error',
     component: 'layout/Layout',
     redirect: 'noredirect',
@@ -435,22 +368,6 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/zip',
-    component: 'layout/Layout',
-    redirect: '/zip/download',
-    alwaysShow: true,
-    meta: { title: 'zip', icon: 'zip' },
-    children: [
-      {
-        path: 'download',
-        component: 'views/zip/index',
-        name: 'ExportZip',
-        meta: { title: 'exportZip' }
-      }
-    ]
-  },
-
-  {
     path: '/pdf',
     component: 'layout/Layout',
     redirect: '/pdf/index',
@@ -467,34 +384,6 @@ export const asyncRoutes = [
     path: '/pdf/download',
     component: 'views/pdf/download',
     hidden: true
-  },
-
-  {
-    path: '/theme',
-    component: 'layout/Layout',
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'index',
-        component: 'views/theme/index',
-        name: 'Theme',
-        meta: { title: 'theme', icon: 'theme' }
-      }
-    ]
-  },
-
-  {
-    path: '/clipboard',
-    component: 'layout/Layout',
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'index',
-        component: 'views/clipboard/index',
-        name: 'ClipboardDemo',
-        meta: { title: 'clipboardDemo', icon: 'clipboard' }
-      }
-    ]
   },
 
   {

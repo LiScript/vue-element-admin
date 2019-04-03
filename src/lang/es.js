@@ -17,9 +17,7 @@ export default {
     dndList: 'Lista Dnd',
     splitPane: 'Panel dividido',
     avatarUpload: 'Subir avatar',
-    dropzone: 'Subir ficheros',
     sticky: 'Sticky',
-    countTo: 'CountTo',
     componentMixin: 'Mixin',
     backToTop: 'Ir arriba',
     dragDialog: 'Drag Dialog',
@@ -57,11 +55,8 @@ export default {
     selectExcel: 'Export seleccionado',
     mergeHeader: 'Merge Header',
     uploadExcel: 'Subir Excel',
-    zip: 'Zip',
     pdf: 'PDF',
-    exportZip: 'Exportar a Zip',
     theme: 'Tema',
-    clipboardDemo: 'Clipboard',
     i18n: 'I18n',
     externalLink: 'Enlace externo'
   },
@@ -142,10 +137,6 @@ export default {
   excel: {
     export: 'Exportar',
     selectedExport: 'Exportar seleccionados',
-    placeholder: 'Por favor escribe un nombre de fichero'
-  },
-  zip: {
-    export: 'Exportar',
     placeholder: 'Por favor escribe un nombre de fichero'
   },
   pdf: {

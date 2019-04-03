@@ -5,7 +5,7 @@
       </a>
     </p>
     <div class="icons-wrapper">
-      <div v-for="item of iconsMap" :key="item" @click="handleClipboard(generateIconCode(item),$event)">
+      <div v-for="item of iconsMap" :key="item">
         <el-tooltip placement="top">
           <div slot="content">
             {{ generateIconCode(item) }}
@@ -22,7 +22,6 @@
 
 <script>
 import icons from './requireIcons'
-import clipboard from '@/utils/clipboard'
 
 export default {
   name: 'Icons',
@@ -34,9 +33,6 @@ export default {
   methods: {
     generateIconCode(symbol) {
       return `<svg-icon icon-class="${symbol}" />`
-    },
-    handleClipboard(text, event) {
-      clipboard(text, event)
     }
   }
 }

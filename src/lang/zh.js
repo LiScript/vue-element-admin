@@ -17,9 +17,7 @@ export default {
     dndList: '列表拖拽',
     splitPane: 'Splitpane',
     avatarUpload: '头像上传',
-    dropzone: 'Dropzone',
     sticky: 'Sticky',
-    countTo: 'CountTo',
     componentMixin: '小组件',
     backToTop: '返回顶部',
     dragDialog: '拖拽 Dialog',
@@ -57,11 +55,8 @@ export default {
     selectExcel: '导出 已选择项',
     mergeHeader: '导出 多级表头',
     uploadExcel: '上传 Excel',
-    zip: 'Zip',
     pdf: 'PDF',
-    exportZip: 'Export Zip',
     theme: '换肤',
-    clipboardDemo: 'Clipboard',
     i18n: '国际化',
     externalLink: '外链'
   },
@@ -143,10 +138,6 @@ export default {
     export: '导出',
     selectedExport: '导出已选择项',
     placeholder: '请输入文件名(默认excel-list)'
-  },
-  zip: {
-    export: '导出',
-    placeholder: '请输入文件名(默认file)'
   },
   pdf: {
     tips: '这里使用   window.print() 来实现下载pdf的功能'
