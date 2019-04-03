@@ -88,20 +88,6 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
 */
 export const asyncRoutes = [
-
-  {
-    path: '/icon',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/svg-icons/index'),
-        name: 'Icons',
-        meta: { title: 'icons', icon: 'icon', noCache: true }
-      }
-    ]
-  },
-
   /** when your routing map is too long, you can split it into small modules **/
   componentsRouter,
   tableRouter,
@@ -171,17 +157,6 @@ export const asyncRoutes = [
         component: () => import('@/views/excel/uploadExcel'),
         name: 'UploadExcel',
         meta: { title: 'uploadExcel' }
-      }
-    ]
-  },
-
-  {
-    path: 'external-link',
-    component: Layout,
-    children: [
-      {
-        path: 'https://github.com/PanJiaChen/vue-element-admin',
-        meta: { title: 'externalLink', icon: 'link' }
       }
     ]
   },
