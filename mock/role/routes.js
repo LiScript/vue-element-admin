@@ -73,45 +73,6 @@ export const constantRoutes = [
 ]
 
 export const asyncRoutes = [
-  {
-    path: '/permission',
-    component: 'layout/Layout',
-    redirect: '/permission/index',
-    alwaysShow: true,
-    meta: {
-      title: 'permission',
-      icon: 'lock',
-      roles: ['admin', 'editor']
-    },
-    children: [
-      {
-        path: 'page',
-        component: 'views/permission/page',
-        name: 'PagePermission',
-        meta: {
-          title: 'pagePermission',
-          roles: ['admin']
-        }
-      },
-      {
-        path: 'directive',
-        component: 'views/permission/directive',
-        name: 'DirectivePermission',
-        meta: {
-          title: 'directivePermission'
-        }
-      },
-      {
-        path: 'role',
-        component: 'views/permission/role',
-        name: 'RolePermission',
-        meta: {
-          title: 'rolePermission',
-          roles: ['admin']
-        }
-      }
-    ]
-  },
 
   {
     path: '/icon',
@@ -370,19 +331,6 @@ export const asyncRoutes = [
     path: '/pdf/download',
     component: 'views/pdf/download',
     hidden: true
-  },
-
-  {
-    path: '/i18n',
-    component: 'layout/Layout',
-    children: [
-      {
-        path: 'index',
-        component: 'views/i18n-demo/index',
-        name: 'I18n',
-        meta: { title: 'i18n', icon: 'international' }
-      }
-    ]
   },
 
   {
