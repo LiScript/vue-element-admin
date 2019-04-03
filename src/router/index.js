@@ -9,7 +9,6 @@ import Layout from '@/layout'
 /* Router Modules */
 import componentsRouter from './modules/components'
 import tableRouter from './modules/table'
-import nestedRouter from './modules/nested'
 
 /** note: sub-menu only appear when children.length>=1
  *  detail see  https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -105,7 +104,6 @@ export const asyncRoutes = [
 
   /** when your routing map is too long, you can split it into small modules **/
   componentsRouter,
-  nestedRouter,
   tableRouter,
 
   {
@@ -136,31 +134,6 @@ export const asyncRoutes = [
         component: () => import('@/views/example/list'),
         name: 'ArticleList',
         meta: { title: 'articleList', icon: 'list' }
-      }
-    ]
-  },
-
-  {
-    path: '/error',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'ErrorPages',
-    meta: {
-      title: 'errorPages',
-      icon: '404'
-    },
-    children: [
-      {
-        path: '401',
-        component: () => import('@/views/errorPage/401'),
-        name: 'Page401',
-        meta: { title: 'page401', noCache: true }
-      },
-      {
-        path: '404',
-        component: () => import('@/views/errorPage/404'),
-        name: 'Page404',
-        meta: { title: 'page404', noCache: true }
       }
     ]
   },
@@ -200,25 +173,6 @@ export const asyncRoutes = [
         meta: { title: 'uploadExcel' }
       }
     ]
-  },
-
-  {
-    path: '/pdf',
-    component: Layout,
-    redirect: '/pdf/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/pdf/index'),
-        name: 'PDF',
-        meta: { title: 'pdf', icon: 'pdf' }
-      }
-    ]
-  },
-  {
-    path: '/pdf/download',
-    component: () => import('@/views/pdf/download'),
-    hidden: true
   },
 
   {

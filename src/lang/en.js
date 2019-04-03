@@ -28,7 +28,6 @@ export default {
     lineChart: 'Line Chart',
     mixChart: 'Mix Chart',
     example: 'Example',
-    nested: 'Nested Routes',
     menu1: 'Menu 1',
     'menu1-1': 'Menu 1-1',
     'menu1-2': 'Menu 1-2',
