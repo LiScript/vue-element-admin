@@ -1,23 +1,24 @@
 <template>
   <div class="navbar">
+    <!-- 收缩 -->
     <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-
+    <!-- 面包屑 -->
     <breadcrumb class="breadcrumb-container" />
-
+    <!-- 最右边区域 -->
     <div class="right-menu">
       <template v-if="device!=='mobile'">
+        <!-- 搜索框 -->
         <search class="right-menu-item" />
-
+        <!-- 全屏幕 -->
         <screenfull class="right-menu-item hover-effect" />
-
-        <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
+        <!-- 布局大小 -->
+        <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
           <size-select class="right-menu-item hover-effect" />
-        </el-tooltip>
-
+        </el-tooltip> -->
+        <!-- 语言切换 -->
         <lang-select class="right-menu-item hover-effect" />
-
       </template>
-
+      <!-- 头像区域 -->
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
@@ -26,15 +27,15 @@
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              {{ $t('navbar.dashboard') }}
+              返回首页
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://github.com/PanJiaChen/vue-element-admin/">
-            <el-dropdown-item>
-              {{ $t('navbar.github') }}
+          <router-link to="/">
+            <el-dropdown-item divided>
+              修改密码
             </el-dropdown-item>
-          </a>
-          <el-dropdown-item divided>
+          </router-link>
+          <el-dropdown-item>
             <span style="display:block;" @click="logout">{{ $t('navbar.logOut') }}</span>
           </el-dropdown-item>
         </el-dropdown-menu>
@@ -45,19 +46,18 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
-import Screenfull from '@/components/Screenfull'
-import SizeSelect from '@/components/SizeSelect'
-import LangSelect from '@/components/LangSelect'
-import Search from '@/components/HeaderSearch'
+import Breadcrumb from '@/components/Breadcrumb' // 面包屑
+import Hamburger from '@/components/Hamburger' // 汉堡收缩
+import Screenfull from '@/components/Screenfull' // 全屏幕
+// import SizeSelect from '@/components/SizeSelect'
+import LangSelect from '@/components/LangSelect' // 语言切换
+import Search from '@/components/HeaderSearch' // 搜索区域
 
 export default {
   components: {
     Breadcrumb,
     Hamburger,
     Screenfull,
-    SizeSelect,
     LangSelect,
     Search
   },

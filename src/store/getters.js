@@ -1,8 +1,7 @@
 const getters = {
   sidebar: state => state.app.sidebar,
-  language: state => state.app.language,
-  size: state => state.app.size,
-  device: state => state.app.device,
+  language: state => state.app.language, // 语言
+  device: state => state.app.device, // 电脑还是手机
   visitedViews: state => state.tagsView.visitedViews,
   cachedViews: state => state.tagsView.cachedViews,
   token: state => state.user.token,

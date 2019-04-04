@@ -1,3 +1,10 @@
+/**
+ *
+ * When I wrote this, only God and I understood what I was doing
+ * Now, God only knows
+ * 控制用户信息的全局变量
+ *
+ */
 import { login, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import router, { resetRouter } from '@/router'

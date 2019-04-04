@@ -4,7 +4,9 @@
     <sidebar class="sidebar-container" />
     <div :class="{hasTagsView:needTagsView}" class="main-container">
       <div :class="{'fixed-header':fixedHeader}">
+        <!-- 头部 -->
         <navbar />
+        <!-- 切换 -->
         <tags-view v-if="needTagsView" />
       </div>
       <app-main />

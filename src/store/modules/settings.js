@@ -1,3 +1,10 @@
+/**
+ *
+ * When I wrote this, only God and I understood what I was doing
+ * Now, God only knows
+ * 控制布局的全局变量
+ *
+ */
 import defaultSettings from '@/settings'
 const { showSettings, tagsView, fixedHeader, sidebarLogo, theme } = defaultSettings
 

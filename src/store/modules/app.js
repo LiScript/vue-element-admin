@@ -1,3 +1,10 @@
+/**
+ *
+ * When I wrote this, only God and I understood what I was doing
+ * Now, God only knows
+ * 控制配置的全局变量
+ *
+ */
 import Cookies from 'js-cookie'
 
 const state = {
@@ -6,8 +13,7 @@ const state = {
     withoutAnimation: false
   },
   device: 'desktop',
-  language: Cookies.get('language') || 'en',
-  size: Cookies.get('size') || 'medium'
+  language: Cookies.get('language') || 'en' // 多语言变量
 }
 
 const mutations = {
@@ -28,13 +34,10 @@ const mutations = {
   TOGGLE_DEVICE: (state, device) => {
     state.device = device
   },
+  // 多语言变量
   SET_LANGUAGE: (state, language) => {
     state.language = language
     Cookies.set('language', language)
-  },
-  SET_SIZE: (state, size) => {
-    state.size = size
-    Cookies.set('size', size)
   }
 }
 
@@ -50,9 +53,6 @@ const actions = {
   },
   setLanguage({ commit }, language) {
     commit('SET_LANGUAGE', language)
-  },
-  setSize({ commit }, size) {
-    commit('SET_SIZE', size)
   }
 }
 
