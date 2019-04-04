@@ -1,7 +1,12 @@
-import variables from '@/styles/element-variables.scss'
+/**
+ *
+ * When I wrote this, only God and I understood what I was doing
+ * Now, God only knows
+ * 与vuex中的 settings对应
+ *
+ */
 
 export default {
-  theme: variables.theme,
 
   /**
    * @type {boolean} true | false

@@ -1,5 +1,5 @@
 const getters = {
-  sidebar: state => state.app.sidebar,
+  sidebar: state => state.app.sidebar, // 侧边栏
   language: state => state.app.language, // 语言
   device: state => state.app.device, // 电脑还是手机
   visitedViews: state => state.tagsView.visitedViews,

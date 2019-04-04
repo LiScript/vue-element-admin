@@ -6,14 +6,13 @@
  *
  */
 import defaultSettings from '@/settings'
-const { showSettings, tagsView, fixedHeader, sidebarLogo, theme } = defaultSettings
+const { showSettings, tagsView, fixedHeader, sidebarLogo } = defaultSettings
 
 const state = {
-  theme: theme,
-  showSettings: showSettings,
-  tagsView: tagsView,
-  fixedHeader: fixedHeader,
-  sidebarLogo: sidebarLogo
+  showSettings: showSettings, // 显示配置菜单
+  tagsView: tagsView, // 切换
+  fixedHeader: fixedHeader, // 固定头部
+  sidebarLogo: sidebarLogo // 侧边栏logo
 }
 
 const mutations = {
