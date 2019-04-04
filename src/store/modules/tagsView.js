@@ -1,7 +1,13 @@
-
+/**
+ *
+ * When I wrote this, only God and I understood what I was doing
+ * Now, God only knows
+ * 导航切换控制
+ *
+ */
 const state = {
-  visitedViews: [],
-  cachedViews: []
+  visitedViews: [], // 激活导航
+  cachedViews: [] // 隐藏导航
 }
 
 const mutations = {

@@ -13,8 +13,8 @@ const store = new Vuex.Store({
   modules: {
     app,
     permission,
-    tagsView,
-    settings,
+    tagsView, // 导航切换控制
+    settings, //
     user
   },
   getters

@@ -2,7 +2,7 @@
   <div ref="rightPanel" :class="{show:show}" class="rightPanel-container">
     <div class="rightPanel-background" />
     <div class="rightPanel">
-      <div class="handle-button" :style="{'top':buttonTop+'px','background-color':theme}" @click="show=!show">
+      <div class="handle-button" :style="{'top':buttonTop+'px'}" @click="show=!show">
         <i :class="show?'el-icon-close':'el-icon-setting'" />
       </div>
       <div class="rightPanel-items">
@@ -30,11 +30,6 @@ export default {
   data() {
     return {
       show: false
-    }
-  },
-  computed: {
-    theme() {
-      return this.$store.state.settings.theme
     }
   },
   watch: {
@@ -141,6 +136,7 @@ export default {
   font-size: 24px;
   text-align: center;
   color: #fff;
+  background-color:rgb(64, 201, 198);
   line-height: 48px;
 
   i {
