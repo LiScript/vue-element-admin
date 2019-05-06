@@ -1,12 +1,18 @@
 <template>
   <div class="navbar">
     <!-- 收缩 -->
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <hamburger
+      :is-active="sidebar.opened"
+      class="hamburger-container"
+      @toggleClick="toggleSideBar"
+    />
     <!-- 面包屑 -->
     <breadcrumb class="breadcrumb-container" />
     <!-- 最右边区域 -->
     <div class="right-menu">
       <template v-if="device!=='mobile'">
+        <!-- 夜间模式 -->
+        <HeaderTheme class="right-menu-item" />
         <!-- 搜索框 -->
         <search class="right-menu-item" />
         <!-- 全屏幕 -->
@@ -14,7 +20,7 @@
         <!-- 布局大小 -->
         <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
           <size-select class="right-menu-item hover-effect" />
-        </el-tooltip> -->
+        </el-tooltip>-->
         <!-- 语言切换 -->
         <lang-select class="right-menu-item hover-effect" />
       </template>
@@ -26,14 +32,10 @@
         </div>
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
-            <el-dropdown-item>
-              返回首页
-            </el-dropdown-item>
+            <el-dropdown-item>返回首页</el-dropdown-item>
           </router-link>
           <router-link to="/">
-            <el-dropdown-item divided>
-              修改密码
-            </el-dropdown-item>
+            <el-dropdown-item divided>修改密码</el-dropdown-item>
           </router-link>
           <el-dropdown-item>
             <span style="display:block;" @click="logout">{{ $t('navbar.logOut') }}</span>
@@ -49,6 +51,7 @@ import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb' // 面包屑
 import Hamburger from '@/components/Hamburger' // 汉堡收缩
 import Screenfull from '@/components/Screenfull' // 全屏幕
+import HeaderTheme from '@/components/HeaderTheme' // 切换日夜间模式
 // import SizeSelect from '@/components/SizeSelect'
 import LangSelect from '@/components/LangSelect' // 语言切换
 import Search from '@/components/HeaderSearch' // 搜索区域
@@ -59,15 +62,11 @@ export default {
     Hamburger,
     Screenfull,
     LangSelect,
-    Search
+    Search,
+    HeaderTheme
   },
   computed: {
-    ...mapGetters([
-      'sidebar',
-      'name',
-      'avatar',
-      'device'
-    ])
+    ...mapGetters(['sidebar', 'name', 'avatar', 'device'])
   },
   methods: {
     toggleSideBar() {
@@ -87,18 +86,18 @@ export default {
   overflow: hidden;
   position: relative;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 
   .hamburger-container {
     line-height: 46px;
     height: 100%;
     float: left;
     cursor: pointer;
-    transition: background .3s;
-    -webkit-tap-highlight-color:transparent;
+    transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
-      background: rgba(0, 0, 0, .025)
+      background: rgba(0, 0, 0, 0.025);
     }
   }
 
@@ -130,10 +129,10 @@ export default {
 
       &.hover-effect {
         cursor: pointer;
-        transition: background .3s;
+        transition: background 0.3s;
 
         &:hover {
-          background: rgba(0, 0, 0, .025)
+          background: rgba(0, 0, 0, 0.025);
         }
       }
     }

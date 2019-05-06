@@ -5,10 +5,12 @@
  * 控制布局的全局变量
  *
  */
+import variables from '@/styles/element-variables.scss'
 import defaultSettings from '@/settings'
 const { showSettings, tagsView, fixedHeader, sidebarLogo } = defaultSettings
 
 const state = {
+  theme: variables.theme,
   showSettings: showSettings, // 显示配置菜单
   tagsView: tagsView, // 切换
   fixedHeader: fixedHeader, // 固定头部

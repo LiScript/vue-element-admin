@@ -52,6 +52,7 @@ const mutations = {
 }
 
 const actions = {
+  // 遍历获取路由
   generateRoutes({ commit }, roles) {
     return new Promise(resolve => {
       let accessedRoutes
